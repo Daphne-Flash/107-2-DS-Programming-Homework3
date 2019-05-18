@@ -180,6 +180,9 @@ map_dfr(exhibitionList,dataframe_show_info) -> df_allShows
 
 ```{r ans24}
 # levels(df_allShows$sourceWebName)
+df_allShows$sourceWebName <- as.factor(df_allShows$sourceWebName)
+class(df_allShows$sourceWebName)
+levels(df_allShows$sourceWebName)
 ```
 
 ### 2.5 計算單一來源
@@ -187,6 +190,8 @@ map_dfr(exhibitionList,dataframe_show_info) -> df_allShows
 
 ```{r ans25}
 # totalCount
+totalCount <- sum(df_allShows$sourceWebName=="全國藝文活動資訊系統")
+totalCount
 ```
 
 
