@@ -49,8 +49,8 @@ finStatement <- read_csv("http://mopsfin.twse.com.tw/opendata/t187ap06_O_ci.csv"
 變數**營業利益（損失）**是公司本業的利益（若為正值）或損失（若為負值）。請找出有營業損失的公司名稱，存成character class的答案物件loss1Companies。
 ```{r ans11}
 # loss1Companies
-loss <- finStatement$`營業利益（損失）`<0
-loss1Companies <- 
+loss <- finStatement$`營業利益（損失）`< 0
+loss1Companies <- as.character(finStatement[loss,"公司名稱"])
 loss1Companies
 ```
 
@@ -58,6 +58,9 @@ loss1Companies
 請找出每股盈餘為負值的公司名稱，存成character class的答案物件loss2Companies。
 ```{r ans12}
 # loss2Companies
+negative <- finStatement$`基本每股盈餘（元）` < 0
+loss2Companies <- as.character(finStatement[negative,"公司名稱"])
+loss2Companies
 ```
 
 ### 1.3 單一條件成立
