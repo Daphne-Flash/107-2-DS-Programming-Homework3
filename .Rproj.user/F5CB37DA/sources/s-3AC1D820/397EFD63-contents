@@ -127,13 +127,13 @@ numExhibitions
 ```{r ans22}
 # df_oneShow
 df_oneShow <- list( 
-  title="哇賽!碰─體感大冒險2.0特展",
-  time="2019/01/01 09:00:00",
-  location="高雄市三民區九如一路720號",
-  locationName="國立科學工藝博物館",
-  price="體驗票+100;優惠票+230;學生票+240;全票+270",
-  endTime="2019/12/12 17:00:00",
-  sourceWebName="全國藝文活動資訊系統"
+  title=exhibitionList[[1]][["title"]],
+  time=exhibitionList[[1]][["showInfo"]][[1]][["time"]],
+  location=exhibitionList[[1]][["showInfo"]][[1]][["location"]],
+  locationName=exhibitionList[[1]][["showInfo"]][[1]][["locationName"]],
+  price=exhibitionList[[1]][["showInfo"]][[1]][["price"]],
+  endTime=exhibitionList[[1]][["showInfo"]][[1]][["endTime"]],
+  sourceWebName=exhibitionList[[1]][["sourceWebName"]]
 )
 df_oneShow <- as.data.frame(df_oneShow,stringsAsFactors = F)
 df_oneShow
@@ -153,6 +153,19 @@ return(df_oneShow)
 
 ```{r ans23}
 #  dataframe_show_info
+dataframe_show_info <- function(exhibitionInput){
+  df_oneShow <- df_oneShow <- list( 
+  title=exhibitionInput[["title"]],
+  time=exhibitionInput[["showInfo"]][[1]][["time"]],
+  location=exhibitionInput[["showInfo"]][[1]][["location"]],
+  locationName=exhibitionInput[["showInfo"]][[1]][["locationName"]],
+  price=exhibitionInput[["showInfo"]][[1]][["price"]],
+  endTime=exhibitionInput[["showInfo"]][[1]][["endTime"]],
+  sourceWebName=exhibitionInput[["sourceWebName"]])
+  return(df_oneShow)
+}
+dataframe_show_info(exhibitionList[[5]])
+dataframe_show_info
 ```
 
 ### 2.4 活動資訊來源種類
