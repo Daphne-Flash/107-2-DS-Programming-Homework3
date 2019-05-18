@@ -109,6 +109,8 @@ str(exhibitionList[[1]])
 請使用`length()`檢查exhibitionList裡的活動數目，並把數值存在答案物件numExhibitions。
 ```{r ans21}
 # numExhibitions
+numExhibitions <- length(exhibitionList)
+numExhibitions
 ```
 
 ### 2.2 創建活動data frame
@@ -124,6 +126,17 @@ str(exhibitionList[[1]])
 
 ```{r ans22}
 # df_oneShow
+df_oneShow <- list( 
+  title="哇賽!碰─體感大冒險2.0特展",
+  time="2019/01/01 09:00:00",
+  location="高雄市三民區九如一路720號",
+  locationName="國立科學工藝博物館",
+  price="體驗票+100;優惠票+230;學生票+240;全票+270",
+  endTime="2019/12/12 17:00:00",
+  sourceWebName="全國藝文活動資訊系統"
+)
+df_oneShow <- as.data.frame(df_oneShow,stringsAsFactors = F)
+df_oneShow
 ```
 
 ### 2.3 活動創立函數
