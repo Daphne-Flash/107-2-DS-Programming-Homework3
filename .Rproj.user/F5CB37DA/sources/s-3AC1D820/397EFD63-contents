@@ -75,12 +75,21 @@ loss2Companies
 
 ```{r ans13}
 # only1LossCompanies
+gain <- finStatement$`營業利益（損失）` > 0
+postitive <- finStatement$`基本每股盈餘（元）` > 0
+case1 <- gain & negative
+case2 <- loss & postitive
+condition1 <- case1 | case2
+only1LossCompanies <- as.character(finStatement[condition1,"公司名稱"])
+only1LossCompanies
 ```
 
 ### 1.4 子樣本
 本題物件為data frame class，使用`[.R,.C]`選出符合上題條件的子樣本，存成data frame class的答案物件subsample。
 ```{r ans14}
 # subsample
+subsample <- finStatement[condition1,"公司名稱"]
+subsample
 ```
 
 ## 2 展覽資訊
