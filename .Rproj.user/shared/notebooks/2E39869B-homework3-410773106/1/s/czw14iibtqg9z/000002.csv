@@ -1,0 +1,3 @@
+"0","# subsample"
+"0","subsample <- finStatement[condition1,]"
+"0","subsample"

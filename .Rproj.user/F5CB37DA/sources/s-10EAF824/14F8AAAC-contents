@@ -88,7 +88,7 @@ only1LossCompanies
 本題物件為data frame class，使用`[.R,.C]`選出符合上題條件的子樣本，存成data frame class的答案物件subsample。
 ```{r ans14}
 # subsample
-subsample <- finStatement[condition1,"公司名稱"]
+subsample <- finStatement[condition1,]
 subsample
 ```
 
