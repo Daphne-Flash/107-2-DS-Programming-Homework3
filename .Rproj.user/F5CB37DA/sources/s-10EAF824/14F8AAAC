@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2039058211",
+    "hash" : "0",
     "id" : "14F8AAAC",
-    "lastKnownWriteTime" : 1558506459,
-    "last_content_update" : 1558506459036,
+    "lastKnownWriteTime" : 1558507239,
+    "last_content_update" : 1558507239280,
     "path" : "~/GitHub/107-2-DS-Programming-Homework3/homework3-410773106.Rmd",
     "project_path" : "homework3-410773106.Rmd",
     "properties" : {
-        "cursorPosition" : "85,0",
-        "scrollLine" : "79"
+        "cursorPosition" : "168,1",
+        "scrollLine" : "151"
     },
     "relative_order" : 1,
     "source_on_save" : false,
