@@ -50,7 +50,7 @@ finStatement <- read_csv("http://mopsfin.twse.com.tw/opendata/t187ap06_O_ci.csv"
 ```{r ans11}
 # loss1Companies
 loss <- finStatement$`營業利益（損失）`< 0
-loss1Companies <- as.character(finStatement[loss,"公司名稱"])
+loss1Companies <- finStatement$公司名稱[loss]
 loss1Companies
 ```
 
@@ -59,7 +59,7 @@ loss1Companies
 ```{r ans12}
 # loss2Companies
 negative <- finStatement$`基本每股盈餘（元）` < 0
-loss2Companies <- as.character(finStatement[negative,"公司名稱"])
+loss2Companies <- finStatement$公司名稱[negative]
 loss2Companies
 ```
 
@@ -80,7 +80,7 @@ postitive <- finStatement$`基本每股盈餘（元）` > 0
 case1 <- gain & negative
 case2 <- loss & postitive
 condition1 <- case1 | case2
-only1LossCompanies <- as.character(finStatement[condition1,"公司名稱"])
+only1LossCompanies <-finStatement$公司名稱[condition1]
 only1LossCompanies
 ```
 
